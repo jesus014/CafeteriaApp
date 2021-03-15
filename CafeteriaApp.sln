@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CapasBase", "CapasBase", "{532DBE63-8F86-413D-A837-4C3586313191}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppMovil", "AppMovil", "{B208D24A-7028-4ED7-BFCE-034E09D82D0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Escritorio", "Escritorio", "{84680886-74AA-414A-A9B8-F66510A01E07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPI", "WebAPI", "{69509BB1-4EF5-4168-9FE0-9EDC30B2C998}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeteriaApp.COMMON", "CafeteriaApp.COMMON\CafeteriaApp.COMMON.csproj", "{8A13AB3F-855A-418A-B0F1-97875DF5B307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeteriaApp.DAL.MsSQL", "CafeteriaApp.DAL.MsSQL\CafeteriaApp.DAL.MsSQL.csproj", "{987BAC8D-184F-4FEF-9336-C7F4CC204E98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeteriaApp.BIZ", "CafeteriaApp.BIZ\CafeteriaApp.BIZ.csproj", "{8E17315C-589A-4F5E-997A-6E5BA3258CAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A13AB3F-855A-418A-B0F1-97875DF5B307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A13AB3F-855A-418A-B0F1-97875DF5B307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A13AB3F-855A-418A-B0F1-97875DF5B307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A13AB3F-855A-418A-B0F1-97875DF5B307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{987BAC8D-184F-4FEF-9336-C7F4CC204E98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{987BAC8D-184F-4FEF-9336-C7F4CC204E98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{987BAC8D-184F-4FEF-9336-C7F4CC204E98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{987BAC8D-184F-4FEF-9336-C7F4CC204E98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E17315C-589A-4F5E-997A-6E5BA3258CAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E17315C-589A-4F5E-997A-6E5BA3258CAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E17315C-589A-4F5E-997A-6E5BA3258CAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E17315C-589A-4F5E-997A-6E5BA3258CAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8A13AB3F-855A-418A-B0F1-97875DF5B307} = {532DBE63-8F86-413D-A837-4C3586313191}
+		{987BAC8D-184F-4FEF-9336-C7F4CC204E98} = {532DBE63-8F86-413D-A837-4C3586313191}
+		{8E17315C-589A-4F5E-997A-6E5BA3258CAE} = {532DBE63-8F86-413D-A837-4C3586313191}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F2B3C854-168E-475E-B953-E7711CCC45A2}
+	EndGlobalSection
+EndGlobal

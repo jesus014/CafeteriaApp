@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "c5aehLN2dEZ+ve3v2GPwFTW32F2h2Mgn74lqw9XEfBgXZh58XUe34oIp5LYq0EmXb6fUc1Xmp8Vygous68qiIA==",
+  "success": true,
+  "projectFilePath": "C:\\AplicacionesXamarin\\CafeteriaApp\\CafeteriaApp.DAL.MsSQL\\CafeteriaApp.DAL.MsSQL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jesus Guarneros\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Jesus Guarneros\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
