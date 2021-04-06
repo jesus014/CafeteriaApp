@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EbtwLM9c2OXMPsDttCOxwEevunn2tiBxAXL4HQVngjYF734N0xvrGuHeE7IT2rCmokh7Mf9vXsN6sKIOd1Wkrg==",
+  "dgSpecHash": "I46HSv4vQNxoUxTpsJRPTHNJSmSJrodBwvC+uX2LVcYK2ty1J5HDYXW58Ngu6192zK1/fe0z/GuOJDqtOhDvoA==",
   "success": true,
   "projectFilePath": "C:\\AplicacionesXamarin\\CafeteriaApp\\CafeteriaApp.COMMON\\CafeteriaApp.COMMON.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jesus Guarneros\\.nuget\\packages\\fluentvalidation\\9.5.3\\fluentvalidation.9.5.3.nupkg.sha512",
     "C:\\Users\\Jesus Guarneros\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Jesus Guarneros\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
