@@ -1,0 +1,8 @@
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.COMMON\bin\Debug\netstandard2.0\CafeteriaApp.COMMON.deps.json
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.COMMON\bin\Debug\netstandard2.0\CafeteriaApp.COMMON.dll
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.COMMON\bin\Debug\netstandard2.0\CafeteriaApp.COMMON.pdb
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.COMMON\obj\Debug\netstandard2.0\CafeteriaApp.COMMON.AssemblyInfoInputs.cache
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.COMMON\obj\Debug\netstandard2.0\CafeteriaApp.COMMON.AssemblyInfo.cs
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.COMMON\obj\Debug\netstandard2.0\CafeteriaApp.COMMON.csproj.CoreCompileInputs.cache
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.COMMON\obj\Debug\netstandard2.0\CafeteriaApp.COMMON.dll
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.COMMON\obj\Debug\netstandard2.0\CafeteriaApp.COMMON.pdb

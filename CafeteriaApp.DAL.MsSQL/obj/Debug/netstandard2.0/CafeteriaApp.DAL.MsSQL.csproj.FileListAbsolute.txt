@@ -1,0 +1,12 @@
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.DAL.MsSQL\bin\Debug\netstandard2.0\CafeteriaApp.DAL.MsSQL.deps.json
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.DAL.MsSQL\bin\Debug\netstandard2.0\CafeteriaApp.DAL.MsSQL.dll
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.DAL.MsSQL\bin\Debug\netstandard2.0\CafeteriaApp.DAL.MsSQL.pdb
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.DAL.MsSQL\bin\Debug\netstandard2.0\CafeteriaApp.COMMON.dll
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.DAL.MsSQL\bin\Debug\netstandard2.0\CafeteriaApp.COMMON.pdb
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.DAL.MsSQL\obj\Debug\netstandard2.0\CafeteriaApp.DAL.MsSQL.csprojAssemblyReference.cache
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.DAL.MsSQL\obj\Debug\netstandard2.0\CafeteriaApp.DAL.MsSQL.AssemblyInfoInputs.cache
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.DAL.MsSQL\obj\Debug\netstandard2.0\CafeteriaApp.DAL.MsSQL.AssemblyInfo.cs
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.DAL.MsSQL\obj\Debug\netstandard2.0\CafeteriaApp.DAL.MsSQL.csproj.CoreCompileInputs.cache
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.DAL.MsSQL\obj\Debug\netstandard2.0\CafeteriaApp.DAL.MsSQL.csproj.CopyComplete
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.DAL.MsSQL\obj\Debug\netstandard2.0\CafeteriaApp.DAL.MsSQL.dll
+C:\AplicacionesXamarin\CafeteriaApp\CafeteriaApp.DAL.MsSQL\obj\Debug\netstandard2.0\CafeteriaApp.DAL.MsSQL.pdb

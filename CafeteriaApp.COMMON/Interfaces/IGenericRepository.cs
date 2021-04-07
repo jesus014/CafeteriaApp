@@ -46,5 +46,12 @@ namespace CafeteriaApp.COMMON.Interfaces
         /// <param name="querySql">consulta sql</param>
         /// <returns> conjunto de entidades que coinciden con la consulta</returns>
         IEnumerable<T> Query(string querySql);
+
+        /// <summary>
+        /// buscar una entidad por su id
+        /// </summary>
+        /// <param name="id">Id de la entidad a buscar</param>
+        /// <returns>Entidad que coincide </returns>
+        T SearchById(string id);
     }
 }

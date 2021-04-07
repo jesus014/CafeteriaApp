@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("CafeteriaApp.BIZ")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("CafeteriaApp.Test.DAL.MsSQL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("CafeteriaApp.BIZ")]
-[assembly: System.Reflection.AssemblyTitleAttribute("CafeteriaApp.BIZ")]
+[assembly: System.Reflection.AssemblyProductAttribute("CafeteriaApp.Test.DAL.MsSQL")]
+[assembly: System.Reflection.AssemblyTitleAttribute("CafeteriaApp.Test.DAL.MsSQL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
