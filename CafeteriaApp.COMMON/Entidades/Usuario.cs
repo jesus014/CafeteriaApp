@@ -6,7 +6,7 @@ namespace CafeteriaApp.COMMON.Entidades
 {
     public class Usuario:BaseDTO
     {
-        public string NombreDeUsuario { get; set; }
+        public string NombreUsuario { get; set; }
         public string Password { get; set; }
         public string  Nombre { get; set; }
         public string Apellidos { get; set; }

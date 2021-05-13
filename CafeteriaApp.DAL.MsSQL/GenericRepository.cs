@@ -30,8 +30,8 @@ namespace CafeteriaApp.DAL.MsSQL
             {
                 try
                 {
-                    var datos = Query($"Select*from{ typeof(T).Name}");
-                    Error = "";
+                    var datos = Query($"Select * from { typeof(T).Name}");
+                    Error = " ";
                     return datos;
 
                 }
@@ -51,13 +51,14 @@ namespace CafeteriaApp.DAL.MsSQL
             ValidationResult validationResult = validator.Validate(entidad);
             if (validationResult.IsValid)
             {
-                string sql1 = $"INSERT INTO {typeof(T).Name}(";
+                string sql1 = $"INSERT INTO {typeof(T).Name} (";
                 string sql2 = ") VALUES (";
                 string sql3 = ");";
+
                 var campos = typeof(T).GetProperties();
                 T dato = (T)Activator.CreateInstance(typeof(T));
                 Type tTipo = typeof(T);
-                for (int i = campos.Length - 1; i >= 0; i--)
+                for (int i = campos.Length -1; i >= 0; i--)
                 {
                     var propiedad = tTipo.GetProperty(campos[i].Name);
                     var valor = propiedad.GetValue(entidad);
@@ -65,15 +66,15 @@ namespace CafeteriaApp.DAL.MsSQL
                     {
                         continue;
                     }
-                    sql1 += "" + campos[i].Name;
+                    sql1 += " " + campos[i].Name;
                     switch (propiedad.PropertyType.Name)
                     {
-                        case "string":
+                        case "String":
                             sql2 += "'" + valor + "'";
                             break;
                         case "DateTime":
-                            DateTime dataTime = (DateTime) valor;
-                            sql2 += $"'{dataTime.Year}-{dataTime.Month}-{dataTime.Day} {dataTime.Hour}: {dataTime.Minute}: {dataTime.Second}'";
+                            DateTime dateTime = (DateTime) valor;
+                            sql2 += $"'{dateTime.Year}-{dateTime.Month}-{dateTime.Day} {dateTime.Hour}: {dateTime.Minute}: {dateTime.Second}'";
                             break;
                         default:
                             sql2 += " " + valor;
@@ -100,7 +101,7 @@ namespace CafeteriaApp.DAL.MsSQL
                 Error = "Error de validacion:";
                 foreach (var item in validationResult.Errors)
                 {
-                    Error += item.ErrorMessage + ".";
+                    Error += item.ErrorMessage + ". ";
 
                 }
                 return null;
@@ -112,7 +113,7 @@ namespace CafeteriaApp.DAL.MsSQL
         {
             try
             {
-                int r = db.Comando($"DELETE FROM{typeof(T).Name}WHERE Id='{id}';");
+                int r = db.Comando($"DELETE FROM {typeof(T).Name} WHERE Id='{id}';");
                 if (r == 1)
                 {
                     Error = "";
@@ -127,7 +128,7 @@ namespace CafeteriaApp.DAL.MsSQL
             catch (Exception ex)
             {
 
-                Error = ex.Message + ":" + db.Error;
+                Error = ex.Message + ": " + db.Error;
                 return false;
 
             }
@@ -168,7 +169,7 @@ namespace CafeteriaApp.DAL.MsSQL
             catch (Exception ex)
             {
 
-                Error = ex.Message + ":" + db.Error;
+                Error = ex.Message + ": " + db.Error;
                 return null;
             }
         }
@@ -177,7 +178,7 @@ namespace CafeteriaApp.DAL.MsSQL
         {
             try
             {
-                return Query($"Select * from{typeof(T).Name}WHERE Id{id}';").SingleOrDefault();
+                return Query($"Select * from {typeof(T).Name} WHERE Id='{id}';").SingleOrDefault();
             }
             catch (Exception ex)
             {
@@ -192,8 +193,8 @@ namespace CafeteriaApp.DAL.MsSQL
             ValidationResult validationResult = validator.Validate(entidad);
             if (validationResult.IsValid)
             {
-                string sql1 = $"UPDATE  {typeof(T).Name} SET";
-                string sql2 = $"WHERE Id = {entidad.Id}";
+                string sql1 = $"UPDATE  {typeof(T).Name} SET ";
+                string sql2 = $" WHERE Id = '{entidad.Id}'";
                 string sql = "";
                 var campos = typeof(T).GetProperties();
                 T dato = (T)Activator.CreateInstance(typeof(T));
@@ -208,10 +209,10 @@ namespace CafeteriaApp.DAL.MsSQL
                     var valor = propiedad.GetValue(entidad);
                     if (valor != null)
                     {
-                        sql+=propiedad.Name+"=";
+                        sql += propiedad.Name+" =";
                         switch (propiedad.PropertyType.Name)
                         {
-                            case "string":
+                            case "String":
                                 sql += "'" + valor + "'";
                                 break;
                             case "DateTime":
@@ -231,6 +232,11 @@ namespace CafeteriaApp.DAL.MsSQL
                     }
                     
                 }
+                char ultimo = sql1.Last();
+                if (ultimo == ',')
+                {
+                    sql1 = sql1.Substring(0, sql1.Length - 1);
+                }
                 if (db.Comando(sql1 + " "+sql2 ) == 1)
                 {
                     Error = "";
@@ -247,7 +253,7 @@ namespace CafeteriaApp.DAL.MsSQL
                 Error = "Error de validacion:";
                 foreach (var item in validationResult.Errors)
                 {
-                    Error += item.ErrorMessage + ".";
+                    Error += item.ErrorMessage + ". ";
 
                 }
                 return null;

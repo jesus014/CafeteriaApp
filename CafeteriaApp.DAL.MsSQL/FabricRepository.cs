@@ -13,9 +13,9 @@ namespace CafeteriaApp.DAL.MsSQL
         {
             return new GenericRepository<CategoriaDeProducto>(new CategoriaDeProductoValidator());
         }  
-        public static IGenericRepository <ElementosEnMenu>ElementoEnMenu()
+        public static IGenericRepository <ElementosEnMenu>ElementosEnMenu()
         {
-            return new GenericRepository<ElementosEnMenu>(new ElementoEnMenuValidator());
+            return new GenericRepository<ElementosEnMenu>(new ElementosEnMenuValidator());
         }
         public static IGenericRepository <ElementoEnPaquete>ElementoEnPaquete()
         {

@@ -16,8 +16,7 @@ namespace CafeteriaApp.COMMON.Validadores
             RuleFor(u => u.Foto).NotNull().NotEmpty().MaximumLength(50);
             RuleFor(u => u.IdTipoUsuario).NotNull().NotEmpty().MaximumLength(50);
             RuleFor(u => u.Nombre).NotNull().NotEmpty().MaximumLength(50);
-            RuleFor(u => u.NombreDeUsuario).NotNull().NotEmpty().MaximumLength(50);
-            RuleFor(u => u.Notas).NotNull().NotEmpty();
+            RuleFor(u => u.NombreUsuario).NotNull().NotEmpty().MaximumLength(50);
             RuleFor(u => u.Password).NotNull().NotEmpty().MaximumLength(50);
             RuleFor(u => u.Telefono).NotNull().NotEmpty().MaximumLength(10);
         }
