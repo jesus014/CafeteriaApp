@@ -12,10 +12,9 @@ namespace CafeteriaApp.COMMON.Validadores
         {
             RuleFor(p => p.Cantidad).NotNull().NotEmpty().GreaterThan(0);
             RuleFor(p => p.Costo).NotNull().NotEmpty().GreaterThan(0);
-            RuleFor(p => p.Entregado).NotNull().NotEmpty();
+           
             RuleFor(p => p.IdVenta).NotNull().NotEmpty().MaximumLength(50);
-            RuleFor(p => p.Preparado).NotNull().NotEmpty();
-            RuleFor(p => p.Preparando).NotNull().NotEmpty();
+           
         }
     }
 }

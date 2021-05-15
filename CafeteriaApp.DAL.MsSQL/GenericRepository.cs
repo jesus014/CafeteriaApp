@@ -76,6 +76,9 @@ namespace CafeteriaApp.DAL.MsSQL
                             DateTime dateTime = (DateTime) valor;
                             sql2 += $"'{dateTime.Year}-{dateTime.Month}-{dateTime.Day} {dateTime.Hour}: {dateTime.Minute}: {dateTime.Second}'";
                             break;
+                        case "Boolean":
+                            sql2 += ((bool)valor) ? "1" : "0";
+                            break;
                         default:
                             sql2 += " " + valor;
                             break;
@@ -218,6 +221,9 @@ namespace CafeteriaApp.DAL.MsSQL
                             case "DateTime":
                                 DateTime dataTime = (DateTime)valor;
                                 sql += $"'{dataTime.Year}-{dataTime.Month}-{dataTime.Day} {dataTime.Hour}: {dataTime.Minute}: {dataTime.Second}'";
+                                break;
+                            case "Boolean":
+                                sql += ((bool)valor) ? "1" : "0";
                                 break;
                             default:
                                 sql += " " + valor;

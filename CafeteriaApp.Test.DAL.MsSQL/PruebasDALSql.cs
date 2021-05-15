@@ -1,4 +1,5 @@
 using CafeteriaApp.COMMON.Entidades;
+using CafeteriaApp.COMMON.Interfaces;
 using CafeteriaApp.DAL.MsSQL;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -222,6 +223,8 @@ namespace CafeteriaApp.Test.DAL.MsSQL
                     EstaEnVenta = true,
                     Foto = "fads",
                     Nombre = "plato"
+                  
+                   
                 });
                 var categoria =FabricRepository.CategoriaDeProducto().Create(new CategoriaDeProducto()
                 {
@@ -235,6 +238,7 @@ namespace CafeteriaApp.Test.DAL.MsSQL
                     Descripcion = "producto",
                     EsPreparado = true,
                     EstaEnVenta = true,
+           
                     Foto = "fotodeprueba",
                     IdCategoria = categoria.Id,
                     Nombre = "prueba"
@@ -245,7 +249,8 @@ namespace CafeteriaApp.Test.DAL.MsSQL
                     Descripcion="clliente",
                     Nombre="cliente",
                 });
-                var cliente = FabricRepository.Usuario().Create(new Usuario()
+                IGenericRepository<Usuario> FabricUsuario = FabricRepository.Usuario();
+                var cliente = FabricUsuario.Create(new Usuario()
                 {
                     Apellidos = "cliente",
                     Correo = "cliente@hotmail.com",
@@ -258,12 +263,15 @@ namespace CafeteriaApp.Test.DAL.MsSQL
                     Password = "sadas",
                     Telefono = "1234"
                 });
+                //Assert.IsNull(cliente, FabricUsuario.Error);
                 var vendedor = FabricRepository.Usuario().Create(new Usuario()
                 {
                     Apellidos = "vendedor",
                     Correo = "vendedor@hotmail.com",
                     Nombre = "cliente",
-                    NombreUsuario = "cliente1",
+                    IdTipoUsuario=tCliente.Id,
+                    Foto="ds",
+                    NombreUsuario = "vendedor",
                     Notas = "prueba",
                     Password = "sadas",
                     Telefono = "1234"
@@ -271,10 +279,10 @@ namespace CafeteriaApp.Test.DAL.MsSQL
 
                 var venta = FabricRepository.Venta().Create(new Venta()
                 {
-                    VentaMovil = false,
+                    EsVentaMovil = false,
                     IdCliente = cliente.Id,
                     IdVendedor=vendedor.Id,
-                    Monto=35,
+                    MontoTotal=35,
                     FechaHora=DateTime.Now
                 });
                 int numAntes = repositorio.Read.Count();
@@ -392,7 +400,7 @@ namespace CafeteriaApp.Test.DAL.MsSQL
                     Foto = "vsd",
                     IdTipoUsuario = tCliente.Id,
                     Nombre = "cliente",
-                    NombreUsuario = "cliente1",
+                    NombreUsuario = "Vendedor4",
                     Notas = "prueba",
                     Password = "sadas",
                     Telefono = "1234"
@@ -400,17 +408,17 @@ namespace CafeteriaApp.Test.DAL.MsSQL
                 int numAntes = repositorio.Read.Count();
                 var dato = repositorio.Create(new Venta()
                 {
-                    VentaMovil=false,
+                    EsVentaMovil=false,
                     FechaHora=DateTime.Now,
                     IdCliente=cliente.Id,
                     IdVendedor=vendedor.Id,
-                    Monto=600
+                    MontoTotal=600
                 });
                 Assert.IsNotNull(dato, "No se pudo crear el objeto" + repositorio.Error);
-                dato.Monto = 3;
+                dato.MontoTotal = 3;
                 var datoModificado = repositorio.Update(dato);
                 Assert.IsNotNull(datoModificado, "no se modifico el elemento en menu" + repositorio.Error);
-                Assert.AreEqual(dato.Monto, datoModificado.Monto);
+                Assert.AreEqual(dato.MontoTotal, datoModificado.MontoTotal);
                 Assert.IsTrue(repositorio.Delete(datoModificado.Id));
                 Assert.AreEqual(numAntes, repositorio.Read.Count(), "la cantidad");
                 Assert.IsTrue(FabricRepository.Usuario().Delete(vendedor.Id), "no se elimino el usuario");

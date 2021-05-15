@@ -10,11 +10,11 @@ namespace CafeteriaApp.COMMON.Validadores
     {
         public VentaValidator()
         {
-            RuleFor(v => v.VentaMovil).NotNull();
+            RuleFor(v => v.EsVentaMovil).NotNull();
             RuleFor(v => v.FechaHora).NotNull().NotEmpty();
             RuleFor(v => v.IdCliente).NotNull().NotEmpty().MaximumLength(50);
             RuleFor(v => v.IdVendedor).NotNull().NotEmpty().MaximumLength(50);
-            RuleFor(v => v.Monto).NotNull().NotEmpty().GreaterThan(0);
+            RuleFor(v => v.MontoTotal).NotNull().NotEmpty().GreaterThan(0);
 
 
 

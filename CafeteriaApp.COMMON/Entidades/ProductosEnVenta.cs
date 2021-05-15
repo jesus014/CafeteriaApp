@@ -17,5 +17,7 @@
         public bool Preparado { get; set; }
 
         public bool Entregado { get; set; }
+
+        public string IdPaquete { get; set; }
     }
 }
